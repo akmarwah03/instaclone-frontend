@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { API_LINK } from "../../../API_LINK";
 
 const ProfileList = (props) => {
   return (
@@ -10,7 +11,7 @@ const ProfileList = (props) => {
               <div className="w-3/12">
                 <img
                   className="h-12 w-12 rounded-full m-auto border-indigo-500 border-2 p-0.5"
-                  src={profile.profileImageUrl}
+                  src={API_LINK + "/" + profile.profileImageUrl}
                   alt={profile.username}
                 />
               </div>

@@ -88,8 +88,8 @@ const Comments = (props) => {
             return (
               <div className="flex p-2 0" key={comment._id}>
                 <img
-                  src={comment.userId.profileImageUrl}
-                  alt={comment.userId.profileImageUrl}
+                  src={API_LINK + "/" + comment.userId.profileImageUrl}
+                  alt={API_LINK + "/" + comment.userId.profileImageUrl}
                   className="w-12 h-12 border-2 border-indigo-500 rounded-full"
                 />
                 <h3 className="ml-4">
