@@ -12,3 +12,7 @@
     src: url(./assets/fonts/logo.otf);
   }
 }
+
+.font-logoFont {
+  font-family: "Logo";
+}
