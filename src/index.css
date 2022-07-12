@@ -16,3 +16,11 @@
 .font-logoFont {
   font-family: "Logo";
 }
+
+.h-18 {
+  height: 5rem;
+}
+
+.w-18 {
+  width: 5rem;
+}
