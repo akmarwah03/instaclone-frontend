@@ -1,1 +1,1 @@
-export const API_LINK = "http://localhost:9000";
+export const API_LINK = "https://instaclone-backend-akshay.herokuapp.com";
