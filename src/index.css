@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-200;
+  }
+
+  @font-face {
+    font-family: "Logo";
+    src: url(./assets/fonts/logo.otf);
+  }
+}
