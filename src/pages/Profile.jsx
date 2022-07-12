@@ -30,9 +30,9 @@ const Profile = (props) => {
       setBgImageUrl(data.coverImageUrl);
       const mappedStories = data.stories.map((story) => {
         return {
-          url: story.imageUrl,
+          url: API_LINK + "/" + story.imageUrl,
           header: {
-            profileImage: data.profileImageUrl,
+            profileImage: API_LINK + "/" + data.profileImageUrl,
             heading: data.username,
           },
         };
@@ -50,12 +50,12 @@ const Profile = (props) => {
         <>
           <ProfileStats
             username={username}
-            profileImageUrl={profileImageUrl}
+            profileImageUrl={API_LINK + "/" + profileImageUrl}
             posts={posts}
             followers={followers}
             following={following}
             followed={followed}
-            bgImageUrl={bgImageUrl}
+            bgImageUrl={API_LINK + "/" + bgImageUrl}
             stories={stories}
           />
           <PostsGrid posts={posts} />

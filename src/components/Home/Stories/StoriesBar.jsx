@@ -17,7 +17,7 @@ const StoriesBar = (props) => {
       const data = await response.json();
       setStories(data.stories);
       setUsername(data.username);
-      setProfileImageUrl(data.profileImageUrl);
+      setProfileImageUrl(API_LINK + "/" + data.profileImageUrl);
       setUserStories(data.userStories);
       setIsLoading(false);
     };
@@ -25,11 +25,11 @@ const StoriesBar = (props) => {
   }, [userId]);
 
   return (
-    <div className="h-28 mt-16 rounded-b-3xl bg-white overflow-y-auto overflow-x-hidden">
+    <div className="mt-16 overflow-x-hidden overflow-y-auto bg-white h-28 rounded-b-3xl">
       {!isLoading && (
         <div className="grid grid-flow-col-dense justify-self-start w-min">
           <StoryIcon
-            imageUrl={"profileImageUrl"}
+            imageUrl={profileImageUrl}
             userName={username}
             stories={userStories}
           />
@@ -38,7 +38,7 @@ const StoriesBar = (props) => {
             return (
               <StoryIcon
                 key={story.creator[0]._id}
-                imageUrl={story.creator[0].profileImageUrl}
+                imageUrl={API_LINK + "/" + story.creator[0].profileImageUrl}
                 userName={story.creator[0].username}
                 stories={story.stories}
               />

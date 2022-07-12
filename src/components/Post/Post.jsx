@@ -83,11 +83,11 @@ const Post = (props) => {
           postId={props.postId}
           caption={props.caption}
           username={props.user.name}
-          profileImageUrl={props.user.imageUrl}
+          profileImageUrl={API_LINK + "/" + props.user.imageUrl}
         />
       )}
       <img
-        src={props.imageUrl}
+        src={API_LINK + "/" + props.imageUrl}
         alt=""
         className="w-full rounded-3xl "
         style={{
@@ -101,7 +101,7 @@ const Post = (props) => {
         <Link to={"/profile/" + props.user.creatorId}>
           <div className="grid grid-flow-col place-items-center">
             <img
-              src={props.user.imageUrl}
+              src={API_LINK + "/" + props.user.imageUrl}
               alt=""
               className="h-12 w-12 rounded-full border-indigo-500 border-2 p-0.5"
             />

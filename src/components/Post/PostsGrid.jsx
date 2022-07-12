@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { API_LINK } from "../../../API_LINK";
 
 const PostsGrid = (props) => {
   return (
     <>
       {props.posts.length === 0 ? (
-        <div className="grid gap-8 place-items-center rounded-3xl p-12 w-11/12 bg-white mx-auto my-5">
+        <div className="grid w-11/12 gap-8 p-12 mx-auto my-5 bg-white place-items-center rounded-3xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-28 w-28"
@@ -19,17 +20,17 @@ const PostsGrid = (props) => {
               d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <h1 className=" text-center text-4xl">No posts yet</h1>
+          <h1 className="text-4xl text-center ">No posts yet</h1>
         </div>
       ) : (
-        <div className="gap-y-3 mx-auto my-5 rounded-3xl p-4 w-11/12 bg-white grid grid-cols-3 place-items-center">
+        <div className="grid w-11/12 grid-cols-3 p-4 mx-auto my-5 bg-white gap-y-3 rounded-3xl place-items-center">
           {props.posts.map((post) => {
             return (
               <Link to={"/post/" + post._id} key={post.imageUrl}>
                 <img
-                  className=" rounded-3xl w-10/12 border border-black"
+                  className="w-10/12 border border-black rounded-3xl"
                   style={{ aspectRatio: "1/1" }}
-                  src={post.imageUrl}
+                  src={API_LINK + "/" + post.imageUrl}
                   alt={post.caption}
                 />
               </Link>

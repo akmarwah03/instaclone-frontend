@@ -1,13 +1,14 @@
 import Stories from "react-insta-stories";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_LINK } from "../../../../API_LINK";
 
 const StoryIcon = (props) => {
   const history = useNavigate();
   const [showStory, setShowStory] = useState(false);
   const stories = props.stories.map((story) => {
     return {
-      url: story.imageUrl,
+      url: API_LINK + "/" + story.imageUrl,
       header: {
         profileImage: props.imageUrl,
         heading: props.userName,
@@ -21,7 +22,7 @@ const StoryIcon = (props) => {
 
   return (
     <div
-      className="grid grid-flow-row place-items-center h-24 w-24"
+      className="grid w-24 h-24 grid-flow-row place-items-center"
       onClick={() => {
         if (stories.length !== 0) {
           setShowStory(true);
@@ -36,7 +37,7 @@ const StoryIcon = (props) => {
         className={imageClassses}
       />
       <h4
-        className=" text-xs text-center"
+        className="text-xs text-center "
         style={{
           overflow: "hidden",
           whiteSpace: "nowrap",
@@ -55,7 +56,7 @@ const StoryIcon = (props) => {
             backgroundColor: "rgb(17,17,17)",
             zIndex: "10",
           }}
-          className=" grid place-items-center"
+          className="grid place-items-center"
         >
           <Stories
             stories={stories}

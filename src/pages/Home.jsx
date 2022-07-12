@@ -61,7 +61,7 @@ const Home = (props) => {
         <>
           <StoriesBar />
           {feedEmpty ? (
-            <div className="grid gap-8 place-items-center rounded-3xl p-12 w-11/12 bg-white mx-auto my-5">
+            <div className="grid w-11/12 gap-8 p-12 mx-auto my-5 bg-white place-items-center rounded-3xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-28 w-28"
@@ -76,7 +76,7 @@ const Home = (props) => {
                   d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h1 className=" text-center text-4xl">
+              <h1 className="text-4xl text-center ">
                 Follow people to get their posts on feed
               </h1>
             </div>
@@ -84,13 +84,13 @@ const Home = (props) => {
             <>
               <div
                 id="posts"
-                className=" grid grid-flow-row gap-4 place-items-center py-4 w-full"
+                className="grid w-full grid-flow-row gap-4 py-4 place-items-center"
               >
                 {posts}
               </div>
             </>
           )}
-          <div className=" h-20"></div>
+          <div className="h-20 "></div>
         </>
       )}
     </div>
