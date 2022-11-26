@@ -1,6 +1,6 @@
-/api/*  https://instaclone-backend-akshay.herokuapp.com/:splat  200!
-/uploads/* https://instaclone-backend-akshay.herokuapp.com/:splat  200!
-/profile/uploads/* https://instaclone-backend-akshay.herokuapp.com/:splat  200!
-/post/uploads/* https://instaclone-backend-akshay.herokuapp.com/:splat  200!
+/api/*  https://instaclone-backend-5go8.onrender.com/:splat  200!
+/uploads/* https://instaclone-backend-5go8.onrender.com/:splat  200!
+/profile/uploads/* https://instaclone-backend-5go8.onrender.com/:splat  200!
+/post/uploads/* https://instaclone-backend-5go8.onrender.com/:splat  200!
 /*   /index.html   200
 
